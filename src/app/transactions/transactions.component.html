@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <div class="col-md-4 ">
+        <a class="navbar-brand" routerLink="/dashboard">
+          <i class="fa-solid fa-piggy-bank" style="color: yellowgreen;"></i>
+          &nbsp;<span style="color: yellowgreen;">KID's <span style="color: white;">Bank</span></span></a>
+      </div>
+      <div class="col-md-7">
+        <h3 class="text-white">Transactions</h3>
+      </div>
+        <div class="col-md-1 text-center">
+          <button type="button" routerLink="/dashboard" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>        
+    </div>
+  </nav>
+  <div class="row ">
+    
+    <div class="col-12">
+        <marquee scrollamount="10" direction="left" style="margin-top: 70px;" style="background-color: rgb(131,207,202); color: white;">
+          <p >
+            <span>
+                <span >
+                    <span style="color: yellow;"> Welcome</span> to KID's Bank   &nbsp;  &nbsp;  &nbsp; 
+                    <span><i class="fa-solid fa-star" style="color: red;"></i><span style="color: yellow;">Services</span> available in India | United States | United Kingdom | China | Russia | Australia | Canada | Singapore | Malaysia</span>
+                </span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+                <span ><i class="fa-solid fa-star" style="color: red;"></i><span style="color: yellow;">Mandatory</span> Profile Password change after 365days for better security </span> &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                <span ><i class="fa-solid fa-star" style="color: red;"></i><span style="color: yellow;">Call</span> Us on troll free 1800-005-229</span>
+            </span>
+        </p>
+        
+        </marquee>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-6 col-12">
+            <div class="border border-info d-flex p-4">
+                <label for="search" style="margin-top: 8px;">Search:</label>
+                <input (keyup)="search($event)" type="text" class="form-control ms-2 h-50 border-info p-2" placeholder="Transaction Type">
+                <button (click)=" generatePDF()" class="btn ms-2 text-white h-50" style="background-color: rgba(8, 8, 114, 0.986);">Export</button>
+            </div>
+        </div>
+        <div class="col-md-3 col-12" style="text-align: end;">
+            <img src="../../assets/history.png" alt="" width="150px" height="150px">
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    
+  <div class="row">
+    <div class="col-1"></div>
+        <div class="col-10 border P-2 border-info bg mb-5" style="overflow-x:auto" >
+            <p class="text-center mt-3 " style="color:rgba(8, 8, 114, 0.986) ;"><b>Here is Your Transaction History</b></p>
+            <!-- table -->
+            <table class="table border table-bordered mt-3 text-center border-info">
+                <thead>
+                    <tr style="background-color: rgba(8, 8, 114, 0.986);color: white;">
+                        <th>NO:</th>
+                        <th>Transaction Type</th>
+                        <th>From Account</th>
+                        <th>To Account</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let transaction of allTransactions | filter : searchKey :'type'; let i = index;">
+                        <td><b>{{i+1}}</b></td>
+                        <td>{{transaction.type}}</td>
+                        <td>{{transaction.fromAcno}}</td>
+                        <td>{{transaction.toAcno}}</td>
+                        <td>₹ {{transaction.amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1"></div>
+  </div>
+  </div>

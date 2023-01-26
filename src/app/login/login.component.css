@@ -1,0 +1,16 @@
+
+.backg{
+    background-image: linear-gradient(to right, lightblue, rgb(209, 212, 224));
+    box-shadow: 12px 12px 2px 1px rgba(165, 165, 177, 0.2) ;
+    border-radius: 10px;
+}
+.tex{
+   font-size: 13px; 
+   color: red;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}

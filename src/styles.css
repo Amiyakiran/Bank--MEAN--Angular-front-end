@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Island+Moments&family=Lora&family=Merriweather:wght@300&family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,300;0,900;1,100&family=Roboto:ital,wght@0,100;0,300;1,100&family=Solway&display=swap');
+
+body{
+    font-family: 'Solway', serif;
+    overflow-x: hidden;
+}

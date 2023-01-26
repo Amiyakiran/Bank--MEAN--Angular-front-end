@@ -1,0 +1,24 @@
+nav{
+    background-color: rgba(8, 8, 114, 0.986);
+}
+.custom-toggler.navbar-toggler {
+    color: rgba(8, 8, 114, 0.986);
+}
+.custom{
+   color: lawngreen;
+}
+
+.bor{
+    border-radius: 10px;
+    background-image: linear-gradient(to right, lightblue, rgb(209, 212, 224));
+}
+.tex{
+    font-size: 13px; 
+    color: red;
+}
+
+.backg{
+    background-image: linear-gradient(to right, lightblue, rgb(209, 212, 224));
+    box-shadow: 12px 12px 2px 1px rgba(165, 165, 177, 0.2) ;
+    border-radius: 10px;
+}
